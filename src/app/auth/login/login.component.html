@@ -1,1 +1,37 @@
-<p>login works!</p>
+<section>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    [formGroup]="signupForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <mat-form-field>
+      <input
+        type="email"
+        placeholder="Your email"
+        name="email"
+        email
+        required
+        matInput
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="password"
+        placeholder="Your password"
+        name="password"
+        password
+        required
+        matInput
+      />
+    </mat-form-field>
+
+    <label id="role">Pick your role</label>
+    <mat-radio-group aria-label="role">
+      <mat-radio-button value="admin">Admin &nbsp; </mat-radio-button>
+      <mat-radio-button value="user">User </mat-radio-button>
+    </mat-radio-group>
+    <button mat-raised-button color="accent">Sign Up</button>
+  </form>
+</section>
